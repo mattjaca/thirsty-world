@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://cqfr1k464x3i2"]
+
+[ext_resource type="Texture2D" uid="uid://dlkkubjtr510p" path="res://pngtree-western-cowboy-vector-png-image_7007432.png" id="2_20oed"]
+[ext_resource type="Script" path="res://WesternBoy.gd" id="2_a2d03"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yfp2o"]
+size = Vector2(96, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wq5em"]
+atlas = ExtResource("2_20oed")
+region = Rect2(0, 0, 360, 360)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hlx8n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wq5em")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(512, 296)
+shape = SubResource("RectangleShape2D_yfp2o")
+
+[node name="Pngtree-western-cowboy-vector-png-image7007432" type="Sprite2D" parent="."]
+position = Vector2(312, 296)
+scale = Vector2(-0.224648, 0.332807)
+texture = ExtResource("2_20oed")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(512, 304)
+scale = Vector2(0.238889, 0.238889)
+sprite_frames = SubResource("SpriteFrames_hlx8n")
+animation = &"Jump"
+frame_progress = 0.094624
+script = ExtResource("2_a2d03")

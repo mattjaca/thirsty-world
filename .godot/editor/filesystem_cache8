@@ -1,0 +1,12 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1713196869
+Button.gd::GDScript::-1::1712776582::0::1::::<>Node2D<>::
+character_body_2d.tscn::PackedScene::5907263945364594371::1712887636::0::1::::<><>::uid://dlkkubjtr510p::::res://pngtree-western-cowboy-vector-png-image_7007432.png<>res://WesternBoy.gd
+icon.svg::CompressedTexture2D::7916929295825745948::1712775415::1712775487::1::::<><>::
+nde_2_main_menu.tscn::PackedScene::955285320642843269::1712887636::0::1::::<><>::uid://nm3rj3iwvyql::::res://Textures/RevolverCyl.png<>res://Button.gd
+new_gd_script.gd::GDScript::-1::1712887657::0::1::::<>CharacterBody2D<>::
+node_2d.tscn::PackedScene::8046416627545219423::1712887429::0::1::::<><>::res://WesternBoy.gd
+pngtree-western-cowboy-vector-png-image_7007432.png::CompressedTexture2D::7952626061757810409::1712852469::1712852469::1::::<><>::
+WesternBoy.gd::GDScript::-1::1712854110::0::1::::<>AnimatedSprite2D<>::
+::res://Textures/::1712775487
+RevolverCyl.png::CompressedTexture2D::938958450995393939::1712775415::1712775487::1::::<><>::
