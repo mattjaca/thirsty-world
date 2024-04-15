@@ -84,6 +84,7 @@ offset_bottom = 3.95924
 rotation = 1.26138
 text = "Quit
 "
+flat = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
 root_node = NodePath("../Control")
