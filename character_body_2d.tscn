@@ -27,11 +27,6 @@ animations = [{
 position = Vector2(512, 296)
 shape = SubResource("RectangleShape2D_yfp2o")
 
-[node name="Pngtree-western-cowboy-vector-png-image7007432" type="Sprite2D" parent="."]
-position = Vector2(312, 296)
-scale = Vector2(-0.224648, 0.332807)
-texture = ExtResource("2_20oed")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(512, 304)
 scale = Vector2(0.238889, 0.238889)
