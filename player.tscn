@@ -1,0 +1,103 @@
+[gd_scene load_steps=21 format=3 uid="uid://igmahup37367"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_j0jk7"]
+[ext_resource type="Texture2D" uid="uid://catqhu5h8c8md" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/6.png" id="2_fjjy6"]
+[ext_resource type="Texture2D" uid="uid://csbodjvpg708" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/8.png" id="3_gw1bl"]
+[ext_resource type="Texture2D" uid="uid://c1g5svjxx3teu" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/9.png" id="4_lmplp"]
+[ext_resource type="Texture2D" uid="uid://cwi2rtqpjjjit" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/11.png" id="5_upwnt"]
+[ext_resource type="Texture2D" uid="uid://bp2m4k8t1iogu" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/12.png" id="6_kbnyd"]
+[ext_resource type="Texture2D" uid="uid://cce3ubk01yem3" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/13.png" id="7_kv3td"]
+[ext_resource type="Texture2D" uid="uid://d16aw3hp3vvua" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/14.png" id="8_kgsre"]
+[ext_resource type="Texture2D" uid="uid://nsifcjeml45w" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/15.png" id="9_tjsmf"]
+[ext_resource type="Texture2D" uid="uid://bpliswwlhtv6r" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/16.png" id="10_7a4ag"]
+[ext_resource type="Texture2D" uid="uid://c63q3xt12mif2" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced walk anim/0.png" id="11_h8su1"]
+[ext_resource type="Texture2D" uid="uid://c3tkqh34u5lp" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced walk anim/1.png" id="12_mso4r"]
+[ext_resource type="Texture2D" uid="uid://bvnwwcyl731wf" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced walk anim/2.png" id="13_7giis"]
+[ext_resource type="Texture2D" uid="uid://b2g8le0ryhioe" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced walk anim/3.png" id="14_vbymr"]
+[ext_resource type="Texture2D" uid="uid://ck1rlq7qipwre" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced walk anim/4.png" id="15_bel1q"]
+[ext_resource type="Texture2D" uid="uid://bjwirmkk3jan6" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced walk anim/5.png" id="16_cy0m3"]
+[ext_resource type="Texture2D" uid="uid://bnxoonnkq4p8a" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced walk anim/6.png" id="17_urip7"]
+[ext_resource type="Texture2D" uid="uid://cy47vnvvh8aji" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced walk anim/7.png" id="18_1ri3p"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_47qa3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fjjy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gw1bl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lmplp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_upwnt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kbnyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kv3td")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_kgsre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_tjsmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7a4ag")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_h8su1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_mso4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_7giis")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vbymr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_bel1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_cy0m3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_urip7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_1ri3p")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1um4"]
+size = Vector2(48, 64)
+
+[node name="Player" type="Area2D"]
+position = Vector2(40, 40)
+script = ExtResource("1_j0jk7")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 1.726)
+sprite_frames = SubResource("SpriteFrames_47qa3")
+animation = &"walk"
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_g1um4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
