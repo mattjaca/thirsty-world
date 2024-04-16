@@ -1,5 +1,7 @@
 extends Area2D
 
+signal hit
+
 @export var speed = 400 # how fast the player moves pixel/sec
 var screen_size #size of game window
 
@@ -37,3 +39,15 @@ func _process(delta):
 	
 	
 	pass
+
+
+func _on_body_entered(body):
+	hide()
+	hit.emit()
+	$CollisionShape2D.set_deferred("disabled", true)
+	pass # Replace with function body.
+	
+func start(pos):
+	position=pos
+	show()
+	$CollisionShape2D.disabled=false
