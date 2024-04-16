@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://nu0n6tmfgr1n"]
+[gd_scene load_steps=8 format=3 uid="uid://nu0n6tmfgr1n"]
 
 [ext_resource type="Texture2D" uid="uid://nm3rj3iwvyql" path="res://Textures/RevolverCyl.png" id="2_8ees0"]
 [ext_resource type="Script" path="res://Button.gd" id="2_i8qc8"]
 [ext_resource type="Script" path="res://Start.gd" id="3_xsltw"]
+[ext_resource type="AudioStream" uid="uid://bfrupkdvvruip" path="res://sounds/main menu start sound final.mp3" id="4_2aw5p"]
 
 [sub_resource type="Animation" id="Animation_xmmag"]
 tracks/0/type = "value"
@@ -79,6 +80,10 @@ text = "Start
 "
 flat = true
 script = ExtResource("3_xsltw")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="CanvasLayer/Control/TextureRect/Start"]
+position = Vector2(158, 11)
+stream = ExtResource("4_2aw5p")
 
 [node name="Quit" type="Button" parent="CanvasLayer/Control/TextureRect"]
 layout_mode = 0
