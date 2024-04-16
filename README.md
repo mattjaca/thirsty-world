@@ -1,1 +1,1 @@
-"# thirsty-world" 
+Desert outlaws have killed your family. You are not pleased. Track them down and show your disapproval in this roguelike explorer where every drop of water and every bullet matters out on the open dunes.
