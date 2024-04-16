@@ -1,13 +1,46 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713216505
+::res://::1713226513
+area_2d.gd::GDScript::-1::1713219845::0::1::::<>Area2D<>::
+area_2d.tscn::PackedScene::574626018821594574::1713226411::0::1::::<><>::res://player.gd<>uid://catqhu5h8c8md::::res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/6.png<>uid://csbodjvpg708::::res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/8.png<>uid://c1g5svjxx3teu::::res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/9.png<>uid://cwi2rtqpjjjit::::res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/11.png<>uid://bp2m4k8t1iogu::::res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/12.png<>uid://cce3ubk01yem3::::res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/13.png<>uid://d16aw3hp3vvua::::res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/14.png<>uid://nsifcjeml45w::::res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/15.png<>uid://bpliswwlhtv6r::::res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/16.png<>uid://c63q3xt12mif2::::res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced walk anim/0.png<>uid://c3tkqh34u5lp::::res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced walk anim/1.png<>uid://bvnwwcyl731wf::::res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced walk anim/2.png<>uid://b2g8le0ryhioe::::res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced walk anim/3.png<>uid://ck1rlq7qipwre::::res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced walk anim/4.png<>uid://bjwirmkk3jan6::::res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced walk anim/5.png<>uid://bnxoonnkq4p8a::::res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced walk anim/6.png<>uid://cy47vnvvh8aji::::res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced walk anim/7.png
 Button.gd::GDScript::-1::1713215238::0::1::::<>Node2D<>::
-character_body_2d.tscn::PackedScene::5907263945364594371::1713215238::0::1::::<><>::uid://dlkkubjtr510p::::res://pngtree-western-cowboy-vector-png-image_7007432.png<>res://WesternBoy.gd
+character_body_2d.tscn::PackedScene::5907263945364594371::1713226498::0::1::::<><>::uid://dlkkubjtr510p::::res://pngtree-western-cowboy-vector-png-image_7007432.png<>res://WesternBoy.gd
 icon.svg::CompressedTexture2D::7916929295825745948::1713215238::1713215238::1::::<><>::
-nde_2_main_menu.tscn::PackedScene::955285320642843269::1713215238::0::1::::<><>::uid://nm3rj3iwvyql::::res://Textures/RevolverCyl.png<>res://Button.gd
+nde_2_main_menu.tscn::PackedScene::955285320642843269::1713226498::0::1::::<><>::uid://nm3rj3iwvyql::::res://Textures/RevolverCyl.png<>res://Button.gd
 new_gd_script.gd::GDScript::-1::1713215238::0::1::::<>CharacterBody2D<>::
 node_2d.tscn::PackedScene::8046416627545219423::1713215238::0::1::::<><>::res://WesternBoy.gd
+player.gd::GDScript::-1::1713226498::0::1::::<>Area2D<>::
 pngtree-western-cowboy-vector-png-image_7007432.png::CompressedTexture2D::7952626061757810409::1713215238::1713215238::1::::<><>::
 README.md::TextFile::-1::1713215238::0::1::::<><>::
 WesternBoy.gd::GDScript::-1::1713215238::0::1::::<>AnimatedSprite2D<>::
-::res://Textures/::1713215238
+::res://Textures/::1713217941
 RevolverCyl.png::CompressedTexture2D::938958450995393939::1713215238::1713215238::1::::<><>::
+::res://Textures/Cowboy (Animated Pixel Art)/::1713217941
+::res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/::1713221302
+CowBoyDrawWeapon.png::CompressedTexture2D::773749134312119459::1615005306::1713217952::1::::<><>::
+CowBoyHolsterWeapon.png::CompressedTexture2D::5254529604744720645::1615005284::1713217952::1::::<><>::
+CowBoyIdle.png::CompressedTexture2D::608005023725636192::1615005200::1713217952::1::::<><>::
+CowBoyQuickDrawShot.png::CompressedTexture2D::9149150141666712924::1615005270::1713217952::1::::<><>::
+CowBoyRapidFire.png::CompressedTexture2D::7834917691952799945::1615005946::1713217952::1::::<><>::
+CowBoyShoot.png::CompressedTexture2D::1277748983216836755::1615005818::1713217952::1::::<><>::
+CowBoySmokingIdle.png::CompressedTexture2D::3543021651913688282::1615005350::1713217952::1::::<><>::
+CowBoyWalking.png::CompressedTexture2D::4514981368940724086::1615005250::1713217952::1::::<><>::
+::res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/::1713219247
+6.png::CompressedTexture2D::4813049614328335135::1713219122::1713219247::1::::<><>::
+8.png::CompressedTexture2D::177622377404328563::1713219122::1713219247::1::::<><>::
+9.png::CompressedTexture2D::6611992340543150680::1713219122::1713219247::1::::<><>::
+11.png::CompressedTexture2D::6335181690110916735::1713219122::1713219247::1::::<><>::
+12.png::CompressedTexture2D::3495772506670036120::1713219122::1713219247::1::::<><>::
+13.png::CompressedTexture2D::4923212426497037892::1713219122::1713219247::1::::<><>::
+14.png::CompressedTexture2D::9048208465697139972::1713219122::1713219247::1::::<><>::
+15.png::CompressedTexture2D::950108550927337822::1713219122::1713219247::1::::<><>::
+16.png::CompressedTexture2D::3462480563799980651::1713219122::1713219247::1::::<><>::
+::res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced walk anim/::1713221320
+0.png::CompressedTexture2D::7007520809998700661::1713221284::1713221320::1::::<><>::
+1.png::CompressedTexture2D::199352597690350253::1713221284::1713221320::1::::<><>::
+2.png::CompressedTexture2D::3888598514867018137::1713221284::1713221320::1::::<><>::
+3.png::CompressedTexture2D::4295929282456851352::1713221284::1713221320::1::::<><>::
+4.png::CompressedTexture2D::5529456348527680534::1713221284::1713221320::1::::<><>::
+5.png::CompressedTexture2D::3064053327683594273::1713221284::1713221320::1::::<><>::
+6.png::CompressedTexture2D::3347232081707199110::1713221284::1713221320::1::::<><>::
+7.png::CompressedTexture2D::6519221731216482706::1713221284::1713221320::1::::<><>::
+::res://Textures/Cowboy (Animated Pixel Art)/Preview/::1615006112
