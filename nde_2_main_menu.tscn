@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://nu0n6tmfgr1n"]
+[gd_scene load_steps=7 format=3 uid="uid://nu0n6tmfgr1n"]
 
 [ext_resource type="Texture2D" uid="uid://nm3rj3iwvyql" path="res://Textures/RevolverCyl.png" id="2_8ees0"]
 [ext_resource type="Script" path="res://Button.gd" id="2_i8qc8"]
+[ext_resource type="Script" path="res://Start.gd" id="3_xsltw"]
 
 [sub_resource type="Animation" id="Animation_xmmag"]
 tracks/0/type = "value"
@@ -30,7 +31,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0, 0.994838]
+"values": [0.0, 1.13446]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_f2qsy"]
@@ -77,6 +78,7 @@ offset_bottom = 139.184
 text = "Start
 "
 flat = true
+script = ExtResource("3_xsltw")
 
 [node name="Quit" type="Button" parent="CanvasLayer/Control/TextureRect"]
 layout_mode = 0

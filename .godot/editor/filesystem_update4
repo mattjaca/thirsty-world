@@ -1,3 +1,5 @@
 res://nde_2_main_menu.tscn
 res://character_body_2d.tscn
 res://area_2d.tscn
+res://Start.gd
+res://Button.gd
