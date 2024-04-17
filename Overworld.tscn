@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cyt32gof2076m"]
+[gd_scene load_steps=7 format=3 uid="uid://cyt32gof2076m"]
 
 [ext_resource type="Texture2D" uid="uid://bsj6bwb1kjqd3" path="res://Textures/tilemap/DesertTileset16x16/Tileset16x16/DesertTilemapBlankBackground.png" id="1_h0geb"]
 [ext_resource type="PackedScene" uid="uid://igmahup37367" path="res://player.tscn" id="2_ofq36"]
 [ext_resource type="Texture2D" uid="uid://baoray5nvxeaw" path="res://Textures/thegun.png" id="3_tpjvf"]
+[ext_resource type="AudioStream" uid="uid://dvfxwiqiet6c1" path="res://sounds/We Ride At Dawn! (loop).mp3" id="4_v808l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a0cbq"]
 texture = ExtResource("1_h0geb")
@@ -621,3 +622,7 @@ offset_right = 32.0
 offset_bottom = 119.0
 texture = ExtResource("3_tpjvf")
 expand_mode = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("4_v808l")
+autoplay = true

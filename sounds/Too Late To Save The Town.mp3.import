@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://delscu3i0k4w4"
+path="res://.godot/imported/Too Late To Save The Town.mp3-e7088a9791c811047b05ea14bee0c435.mp3str"
+
+[deps]
+
+source_file="res://sounds/Too Late To Save The Town.mp3"
+dest_files=["res://.godot/imported/Too Late To Save The Town.mp3-e7088a9791c811047b05ea14bee0c435.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

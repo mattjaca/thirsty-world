@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://71dp18a0c75c"
+path="res://.godot/imported/Confronting The Man In Black.mp3-6a72ccf807f7732d5a0eede67a334a5d.mp3str"
+
+[deps]
+
+source_file="res://sounds/Confronting The Man In Black.mp3"
+dest_files=["res://.godot/imported/Confronting The Man In Black.mp3-6a72ccf807f7732d5a0eede67a334a5d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://fwk3ov3sgruu"
+path="res://.godot/imported/Fetlocks In The Wind.mp3-783ccfa14b95261393324e6093852d9e.mp3str"
+
+[deps]
+
+source_file="res://sounds/Fetlocks In The Wind.mp3"
+dest_files=["res://.godot/imported/Fetlocks In The Wind.mp3-783ccfa14b95261393324e6093852d9e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
