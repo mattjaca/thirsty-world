@@ -1,6 +1,7 @@
+TextureRect
+StaticBody2D
 Camera2D
 TileMap
-StaticBody2D
 RigidBody2D
 AudioStreamPlayer2D
 CollisionShape2D
