@@ -1,4 +1,4 @@
-extends Area2D
+extends CharacterBody2D
 
 signal hit
 
@@ -29,6 +29,7 @@ func _process(delta):
 		$AnimatedSprite2D.animation="idle"
 	
 	position += velocity * delta
+	move_and_slide()
 #position = position.clamp(Vector2.ZERO, screen_size)
 	
 	if velocity.x != 0:

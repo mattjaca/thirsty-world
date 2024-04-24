@@ -83,10 +83,10 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1um4"]
-size = Vector2(16, 16)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1jw1v"]
+size = Vector2(16, 8)
 
-[node name="Player" type="Area2D"]
+[node name="Player" type="CharacterBody2D"]
 position = Vector2(32, 40)
 script = ExtResource("1_j0jk7")
 metadata/_edit_group_ = true
@@ -99,6 +99,5 @@ autoplay = "idle"
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_g1um4")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_1jw1v")
