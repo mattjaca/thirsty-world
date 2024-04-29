@@ -1,12 +1,15 @@
-[gd_scene load_steps=11 format=3 uid="uid://cyt32gof2076m"]
+[gd_scene load_steps=14 format=3 uid="uid://cyt32gof2076m"]
 
 [ext_resource type="Texture2D" uid="uid://bsj6bwb1kjqd3" path="res://Textures/tilemap/DesertTileset16x16/Tileset16x16/DesertTilemapBlankBackground.png" id="1_h0geb"]
 [ext_resource type="PackedScene" uid="uid://igmahup37367" path="res://player.tscn" id="2_ofq36"]
 [ext_resource type="Texture2D" uid="uid://baoray5nvxeaw" path="res://Textures/thegun.png" id="3_tpjvf"]
-[ext_resource type="Script" path="res://guntexture.gd" id="4_181i2"]
+[ext_resource type="Script" path="res://gunlogic.gd" id="4_181i2"]
 [ext_resource type="AudioStream" uid="uid://dvfxwiqiet6c1" path="res://sounds/We Ride At Dawn! (loop).mp3" id="4_v808l"]
 [ext_resource type="AudioStream" uid="uid://b15oybg0yxij5" path="res://sounds/gunholster.mp3" id="5_5fsf2"]
 [ext_resource type="Script" path="res://drawgun.gd" id="5_l2meg"]
+[ext_resource type="Script" path="res://Timer.gd" id="7_cvd4a"]
+[ext_resource type="AudioStream" uid="uid://darcceu4iku3u" path="res://sounds/gunshot.mp3" id="8_6jhn0"]
+[ext_resource type="Texture2D" uid="uid://btigjeeh7kvrm" path="res://Textures/RevolverCyl6.png" id="8_mx1y3"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gv7bd"]
 
@@ -621,6 +624,7 @@ zoom = Vector2(1.5, 1.5)
 [node name="UI" type="StaticBody2D" parent="Player/Camera2D"]
 
 [node name="Gun" type="StaticBody2D" parent="Player/Camera2D/UI"]
+script = ExtResource("4_181i2")
 
 [node name="inventorygun" type="TextureRect" parent="Player/Camera2D/UI/Gun"]
 offset_left = -16.0
@@ -629,20 +633,42 @@ offset_right = 32.0
 offset_bottom = 119.0
 texture = ExtResource("3_tpjvf")
 expand_mode = 1
-script = ExtResource("4_181i2")
 
-[node name="drawgun" type="Button" parent="Player/Camera2D/UI/Gun/inventorygun"]
-layout_mode = 0
-offset_right = 48.0
-offset_bottom = 24.0
+[node name="drawgun" type="Button" parent="Player/Camera2D/UI/Gun"]
+z_index = 2
+offset_left = -16.0
+offset_top = 96.0
+offset_right = 32.0
+offset_bottom = 120.0
 script = ExtResource("5_l2meg")
 
-[node name="holstersound" type="AudioStreamPlayer" parent="Player/Camera2D/UI/Gun/inventorygun/drawgun"]
+[node name="holstersound" type="AudioStreamPlayer" parent="Player/Camera2D/UI/Gun/drawgun"]
 stream = ExtResource("5_5fsf2")
+
+[node name="gundrawdelay" type="Timer" parent="Player/Camera2D/UI/Gun/drawgun"]
+wait_time = 0.097
+one_shot = true
+script = ExtResource("7_cvd4a")
+
+[node name="cylinderfullimage" type="TextureRect" parent="Player/Camera2D/UI/Gun"]
+offset_left = -8.0
+offset_top = 96.0
+offset_right = 24.0
+offset_bottom = 120.0
+mouse_filter = 2
+texture = ExtResource("8_mx1y3")
+expand_mode = 1
+
+[node name="gunshot" type="AudioStreamPlayer" parent="Player/Camera2D/UI/Gun"]
+stream = ExtResource("8_6jhn0")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
 position = Vector2(56, 0)
 stream = ExtResource("4_v808l")
 autoplay = true
 
-[connection signal="button_down" from="Player/Camera2D/UI/Gun/inventorygun/drawgun" to="Player/Camera2D/UI/Gun/inventorygun" method="_on_drawgun_button_down"]
+[connection signal="button_down" from="Player/Camera2D/UI/Gun/drawgun" to="Player" method="_on_drawgun_button_down"]
+[connection signal="button_down" from="Player/Camera2D/UI/Gun/drawgun" to="Player/Camera2D/UI/Gun" method="_on_drawgun_button_down"]
+[connection signal="button_down" from="Player/Camera2D/UI/Gun/drawgun" to="Player/Camera2D/UI/Gun/drawgun/gundrawdelay" method="_on_drawgun_button_down"]
+[connection signal="timeout" from="Player/Camera2D/UI/Gun/drawgun/gundrawdelay" to="Player" method="_on_gundrawdelay_timeout"]
+[connection signal="timeout" from="Player/Camera2D/UI/Gun/drawgun/gundrawdelay" to="Player/Camera2D/UI/Gun" method="_on_gundrawdelay_timeout"]

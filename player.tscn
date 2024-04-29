@@ -1,26 +1,97 @@
-[gd_scene load_steps=21 format=3 uid="uid://igmahup37367"]
+[gd_scene load_steps=40 format=3 uid="uid://igmahup37367"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_j0jk7"]
 [ext_resource type="Texture2D" uid="uid://catqhu5h8c8md" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/6.png" id="2_fjjy6"]
+[ext_resource type="Texture2D" uid="uid://s80bp12rvrof" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced draw anim/0.png" id="2_tfwrv"]
+[ext_resource type="Texture2D" uid="uid://7xnvi0vli1b2" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced draw anim/1.png" id="3_f74ey"]
 [ext_resource type="Texture2D" uid="uid://csbodjvpg708" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/8.png" id="3_gw1bl"]
+[ext_resource type="Texture2D" uid="uid://cxfcat3dd7m3y" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced draw anim/2.png" id="4_1huqx"]
 [ext_resource type="Texture2D" uid="uid://c1g5svjxx3teu" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/9.png" id="4_lmplp"]
+[ext_resource type="Texture2D" uid="uid://cnmp58627w28b" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced draw anim/3.png" id="5_oo5fc"]
 [ext_resource type="Texture2D" uid="uid://cwi2rtqpjjjit" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/11.png" id="5_upwnt"]
 [ext_resource type="Texture2D" uid="uid://bp2m4k8t1iogu" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/12.png" id="6_kbnyd"]
+[ext_resource type="Texture2D" uid="uid://da6vmq87rd1u7" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced draw anim/4.png" id="6_pmcv7"]
 [ext_resource type="Texture2D" uid="uid://cce3ubk01yem3" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/13.png" id="7_kv3td"]
+[ext_resource type="Texture2D" uid="uid://cn8346ldabyyu" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced draw anim/5.png" id="7_n7o3i"]
+[ext_resource type="Texture2D" uid="uid://cfel2cbnnabrc" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced holster anim/7.png" id="8_ibfki"]
 [ext_resource type="Texture2D" uid="uid://d16aw3hp3vvua" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/14.png" id="8_kgsre"]
+[ext_resource type="Texture2D" uid="uid://cupir08q3fhax" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced holster anim/4.png" id="9_f4lkp"]
 [ext_resource type="Texture2D" uid="uid://nsifcjeml45w" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/15.png" id="9_tjsmf"]
 [ext_resource type="Texture2D" uid="uid://bpliswwlhtv6r" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced idle anim/16.png" id="10_7a4ag"]
+[ext_resource type="Texture2D" uid="uid://0w3i1wyn0ege" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced holster anim/0.png" id="10_m6ejx"]
 [ext_resource type="Texture2D" uid="uid://c63q3xt12mif2" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced walk anim/0.png" id="11_h8su1"]
+[ext_resource type="Texture2D" uid="uid://csfdpmg1plfh5" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced holster anim/1.png" id="11_tuhff"]
 [ext_resource type="Texture2D" uid="uid://c3tkqh34u5lp" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced walk anim/1.png" id="12_mso4r"]
+[ext_resource type="Texture2D" uid="uid://tn4ctd18qt4u" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced holster anim/2.png" id="12_netat"]
+[ext_resource type="Texture2D" uid="uid://brmryc435n2m2" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced holster anim/3.png" id="13_4ww7v"]
 [ext_resource type="Texture2D" uid="uid://bvnwwcyl731wf" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced walk anim/2.png" id="13_7giis"]
+[ext_resource type="Texture2D" uid="uid://8om1blmqm5he" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced holster anim/5.png" id="14_51mnx"]
 [ext_resource type="Texture2D" uid="uid://b2g8le0ryhioe" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced walk anim/3.png" id="14_vbymr"]
 [ext_resource type="Texture2D" uid="uid://ck1rlq7qipwre" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced walk anim/4.png" id="15_bel1q"]
+[ext_resource type="Texture2D" uid="uid://fy56f7ubasvf" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced holster anim/6.png" id="15_qdx5b"]
 [ext_resource type="Texture2D" uid="uid://bjwirmkk3jan6" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced walk anim/5.png" id="16_cy0m3"]
+[ext_resource type="Texture2D" uid="uid://3ya5asaruu" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced shoot anim/0.png" id="17_io1n2"]
 [ext_resource type="Texture2D" uid="uid://bnxoonnkq4p8a" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced walk anim/6.png" id="17_urip7"]
 [ext_resource type="Texture2D" uid="uid://cy47vnvvh8aji" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced walk anim/7.png" id="18_1ri3p"]
+[ext_resource type="Texture2D" uid="uid://dj7vpprqusd4c" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced shoot anim/2.png" id="18_3c168"]
+[ext_resource type="Texture2D" uid="uid://di86kl3gefvgt" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced shoot anim/3.png" id="19_asd66"]
+[ext_resource type="Texture2D" uid="uid://beb3ycn64p480" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced shoot anim/4.png" id="20_e18op"]
+[ext_resource type="Texture2D" uid="uid://df0k1of4gsxqa" path="res://Textures/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/sliced shoot anim/1.png" id="21_yf5xb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_47qa3"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tfwrv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_f74ey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1huqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oo5fc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pmcv7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_n7o3i")
+}],
+"loop": false,
+"name": &"draw",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_ibfki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_f4lkp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_m6ejx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_tuhff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_netat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4ww7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_51mnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_qdx5b")
+}],
+"loop": false,
+"name": &"holster",
+"speed": 12.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_fjjy6")
@@ -52,6 +123,26 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_io1n2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_3c168")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_asd66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_e18op")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_yf5xb")
+}],
+"loop": false,
+"name": &"shoot",
+"speed": 14.0
 }, {
 "frames": [{
 "duration": 1.0,

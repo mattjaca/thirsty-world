@@ -1,5 +1,6 @@
-TextureRect
+Timer
 AudioStreamPlayer
+TextureRect
 Button
 CollisionShape2D
 CharacterBody2D
