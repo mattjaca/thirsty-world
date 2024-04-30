@@ -12,3 +12,14 @@ func _process(delta):
 
 
 
+
+
+func _on_clickspamprevention_timeout():
+	show()
+	pass # Replace with function body.
+
+
+func _on_button_up():
+	$clickspamprevention.start()
+	hide()
+	pass # Replace with function body.

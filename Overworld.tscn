@@ -650,6 +650,10 @@ wait_time = 0.192
 one_shot = true
 script = ExtResource("7_cvd4a")
 
+[node name="clickspamprevention" type="Timer" parent="Player/Camera2D/UI/Gun/drawgun"]
+wait_time = 0.872
+one_shot = true
+
 [node name="cylinderfullimage" type="TextureRect" parent="Player/Camera2D/UI/Gun"]
 offset_left = -8.0
 offset_top = 96.0
@@ -675,6 +679,8 @@ one_shot = true
 [connection signal="button_down" from="Player/Camera2D/UI/Gun/drawgun" to="Player" method="_on_drawgun_button_down"]
 [connection signal="button_down" from="Player/Camera2D/UI/Gun/drawgun" to="Player/Camera2D/UI/Gun" method="_on_drawgun_button_down"]
 [connection signal="button_down" from="Player/Camera2D/UI/Gun/drawgun" to="Player/Camera2D/UI/Gun/drawgun/gundrawdelay" method="_on_drawgun_button_down"]
+[connection signal="button_up" from="Player/Camera2D/UI/Gun/drawgun" to="Player/Camera2D/UI/Gun/drawgun" method="_on_button_up"]
 [connection signal="timeout" from="Player/Camera2D/UI/Gun/drawgun/gundrawdelay" to="Player" method="_on_gundrawdelay_timeout"]
 [connection signal="timeout" from="Player/Camera2D/UI/Gun/drawgun/gundrawdelay" to="Player/Camera2D/UI/Gun" method="_on_gundrawdelay_timeout"]
+[connection signal="timeout" from="Player/Camera2D/UI/Gun/drawgun/clickspamprevention" to="Player/Camera2D/UI/Gun/drawgun" method="_on_clickspamprevention_timeout"]
 [connection signal="timeout" from="Player/holstertimer" to="Player" method="_on_holstertimer_timeout"]

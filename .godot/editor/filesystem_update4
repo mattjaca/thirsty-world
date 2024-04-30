@@ -5,3 +5,4 @@ res://readygun.tscn
 res://player.gd
 res://gunlogic.gd
 res://Timer.gd
+res://drawgun.gd

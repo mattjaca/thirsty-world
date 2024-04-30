@@ -44,7 +44,7 @@ func _process(delta):
 		$AnimatedSprite2D.animation="walk"
 		$AnimatedSprite2D.flip_v=false
 		$AnimatedSprite2D.flip_h=velocity.x<0
-
+	
 	
 	
 	pass
@@ -78,7 +78,7 @@ func _on_drawgun_button_down():
 
 
 func _on_gundrawdelay_timeout():
-	
+	gundrawn=true;
 	pass # Replace with function body.
 
 
