@@ -64,12 +64,14 @@ func start(pos):
 
 func _on_drawgun_button_down():
 	if(gundrawn==true):
-		gundrawn=false;
+		$holstertimer.start()
+		$AnimatedSprite2D.animation="holster"
+		$AnimatedSprite2D.play()
 	else:
-		
 		$AnimatedSprite2D.animation="draw"
 		$AnimatedSprite2D.play()
 		gundrawn=true;
+	
 	
 	
 	pass # Replace with function body.
@@ -77,4 +79,16 @@ func _on_drawgun_button_down():
 
 func _on_gundrawdelay_timeout():
 	
+	pass # Replace with function body.
+
+
+func _on_holstertimer_timeout():
+	gundrawn=false;
+	pass # Replace with function body.
+
+
+func _on_gun_shoot():
+	$AnimatedSprite2D.animation="shoot"
+	$AnimatedSprite2D.stop()
+	$AnimatedSprite2D.play()
 	pass # Replace with function body.

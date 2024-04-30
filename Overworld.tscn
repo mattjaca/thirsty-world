@@ -646,7 +646,7 @@ script = ExtResource("5_l2meg")
 stream = ExtResource("5_5fsf2")
 
 [node name="gundrawdelay" type="Timer" parent="Player/Camera2D/UI/Gun/drawgun"]
-wait_time = 0.097
+wait_time = 0.192
 one_shot = true
 script = ExtResource("7_cvd4a")
 
@@ -667,8 +667,14 @@ position = Vector2(56, 0)
 stream = ExtResource("4_v808l")
 autoplay = true
 
+[node name="holstertimer" type="Timer" parent="Player"]
+wait_time = 0.76
+one_shot = true
+
+[connection signal="shoot" from="Player/Camera2D/UI/Gun" to="Player" method="_on_gun_shoot"]
 [connection signal="button_down" from="Player/Camera2D/UI/Gun/drawgun" to="Player" method="_on_drawgun_button_down"]
 [connection signal="button_down" from="Player/Camera2D/UI/Gun/drawgun" to="Player/Camera2D/UI/Gun" method="_on_drawgun_button_down"]
 [connection signal="button_down" from="Player/Camera2D/UI/Gun/drawgun" to="Player/Camera2D/UI/Gun/drawgun/gundrawdelay" method="_on_drawgun_button_down"]
 [connection signal="timeout" from="Player/Camera2D/UI/Gun/drawgun/gundrawdelay" to="Player" method="_on_gundrawdelay_timeout"]
 [connection signal="timeout" from="Player/Camera2D/UI/Gun/drawgun/gundrawdelay" to="Player/Camera2D/UI/Gun" method="_on_gundrawdelay_timeout"]
+[connection signal="timeout" from="Player/holstertimer" to="Player" method="_on_holstertimer_timeout"]
