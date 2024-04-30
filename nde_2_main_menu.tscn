@@ -120,3 +120,8 @@ root_node = NodePath("../Control")
 libraries = {
 "": SubResource("AnimationLibrary_f2qsy")
 }
+
+[node name="fadeout" type="Timer" parent="."]
+wait_time = 1.986
+
+[connection signal="timeout" from="fadeout" to="." method="_on_fadeout_timeout"]

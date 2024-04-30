@@ -1,9 +1,9 @@
+CharacterBody2D
 Timer
 AudioStreamPlayer
 TextureRect
 Button
 CollisionShape2D
-CharacterBody2D
 Area2D
 CollisionPolygon2D
 AudioStreamPlayer2D

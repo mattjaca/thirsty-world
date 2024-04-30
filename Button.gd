@@ -16,7 +16,7 @@ func _ready():
 		Credits.hide()
 		Quit.hide()
 		playSound.play()
-		
+		$fadeout.start()
 		#get_tree().quit()
 	) ## Object.function(signalName, callable)
 
@@ -26,3 +26,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta:float) -> void:
 	pass
+
+
+func _on_fadeout_timeout():
+	get_tree().change_scene_to_file("res://Overworld.tscn")
+	pass # Replace with function body.
