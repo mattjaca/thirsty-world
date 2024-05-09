@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csim7oc0beyry"
-path.s3tc="res://.godot/imported/left-facing-fist-emoji-2048x1313-ccslh235.png-42f1cf67ef84be2f5b4c6dc2426932fe.s3tc.ctex"
+uid="uid://bc50wf5kkpwqx"
+path.s3tc="res://.godot/imported/download.jpg-50b81f58c54b10518d62dc3618ffefd0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://left-facing-fist-emoji-2048x1313-ccslh235.png"
-dest_files=["res://.godot/imported/left-facing-fist-emoji-2048x1313-ccslh235.png-42f1cf67ef84be2f5b4c6dc2426932fe.s3tc.ctex"]
+source_file="res://download.jpg"
+dest_files=["res://.godot/imported/download.jpg-50b81f58c54b10518d62dc3618ffefd0.s3tc.ctex"]
 
 [params]
 
