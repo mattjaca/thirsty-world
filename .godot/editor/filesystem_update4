@@ -1,10 +1,4 @@
 res://nde_2_main_menu.tscn
 res://player.tscn
 res://Overworld.tscn
-res://readygun.tscn
-res://player.gd
-res://gunlogic.gd
-res://Timer.gd
-res://drawgun.gd
-res://Button.gd
 res://enemy.tscn
