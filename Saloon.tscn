@@ -1,0 +1,263 @@
+[gd_scene load_steps=28 format=3 uid="uid://1fs4r4601ddo"]
+
+[ext_resource type="Texture2D" uid="uid://bb4j4eenvv6gi" path="res://seamless-textured-wood-floor-old-brown-boards-illustration-of-a-pattern-background-from-broken-panels-for-wallpaper-vector.jpg" id="1_eqbq3"]
+[ext_resource type="Texture2D" uid="uid://bc50wf5kkpwqx" path="res://download.jpg" id="2_cn1od"]
+[ext_resource type="Texture2D" uid="uid://kv0wqbs4mcrf" path="res://Table.png" id="2_i40fk"]
+[ext_resource type="Texture2D" uid="uid://7v125t42q7pe" path="res://middle-finger-emoji-701x1024-oukv7z5g.png" id="3_2f4og"]
+[ext_resource type="Script" path="res://Body.gd" id="4_30r6k"]
+[ext_resource type="Texture2D" uid="uid://csim7oc0beyry" path="res://left-facing-fist-emoji-2048x1313-ccslh235.png" id="5_d7tf8"]
+[ext_resource type="AudioStream" uid="uid://c80hli8xkgtqm" path="res://punch-sound-effect.mp3" id="7_fmv71"]
+[ext_resource type="AudioStream" uid="uid://b4xplgweophd2" path="res://VOXScrm_Wilhelm scream (ID 0477)_BSB.wav" id="8_n7c3v"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5ipmq"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_4vyda"]
+sky_material = SubResource("ProceduralSkyMaterial_5ipmq")
+
+[sub_resource type="Environment" id="Environment_8fvw8"]
+background_mode = 2
+sky = SubResource("Sky_4vyda")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_il7fs"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a08lh"]
+albedo_texture = ExtResource("1_eqbq3")
+
+[sub_resource type="BoxMesh" id="BoxMesh_l3sce"]
+material = SubResource("StandardMaterial3D_a08lh")
+size = Vector3(60, 2, 60)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2m2wx"]
+albedo_texture = ExtResource("2_cn1od")
+
+[sub_resource type="BoxMesh" id="BoxMesh_lb5tx"]
+material = SubResource("StandardMaterial3D_2m2wx")
+size = Vector3(60, 40, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5k2og"]
+albedo_texture = ExtResource("1_eqbq3")
+
+[sub_resource type="BoxMesh" id="BoxMesh_4u8rb"]
+material = SubResource("StandardMaterial3D_5k2og")
+size = Vector3(60, 40, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x1dx5"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_xv8at"]
+points = PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_yhw0w"]
+radius = 2.5
+height = 5.0
+
+[sub_resource type="Animation" id="Animation_claqm"]
+resource_name = "Fight"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, -20), Vector3(0, 0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"getRekt"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_st33h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(2.54427, 6.10333, 0.119901)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xrejk"]
+_data = {
+"Fight": SubResource("Animation_claqm"),
+"RESET": SubResource("Animation_st33h")
+}
+
+[sub_resource type="Animation" id="Animation_n7fpg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.66577, 2.10518, 1.15196)]
+}
+
+[sub_resource type="Animation" id="Animation_d4h5a"]
+resource_name = "Taunt"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, -15), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r5gyb"]
+_data = {
+"RESET": SubResource("Animation_n7fpg"),
+"Taunt": SubResource("Animation_d4h5a")
+}
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_8fvw8")
+
+[node name="Ground" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("BoxShape3D_il7fs")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+mesh = SubResource("BoxMesh_l3sce")
+
+[node name="LeftWall" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LeftWall"]
+shape = SubResource("BoxShape3D_il7fs")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftWall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0338669, 18.8489, 31.8061)
+mesh = SubResource("BoxMesh_lb5tx")
+
+[node name="RightWall" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RightWall"]
+shape = SubResource("BoxShape3D_il7fs")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RightWall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 18.701, -30.0509)
+mesh = SubResource("BoxMesh_4u8rb")
+
+[node name="FrontWall" type="StaticBody3D" parent="."]
+transform = Transform3D(0.0160912, 0, 0.999871, 0, 1, 0, -0.999871, 0, 0.0160912, 8.38029, 6.60517, 0.316154)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FrontWall"]
+shape = SubResource("BoxShape3D_il7fs")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FrontWall"]
+transform = Transform3D(1, 0, 1.86265e-09, 0, 1, 0, -1.86265e-09, 0, 1, -1.94639, 12.2853, -39.0581)
+mesh = SubResource("BoxMesh_4u8rb")
+
+[node name="FrontWall2" type="StaticBody3D" parent="."]
+transform = Transform3D(0.0160912, 0, 0.999871, 0, 1, 0, -0.999871, 0, 0.0160912, 50.9637, 10.9931, 2.96474)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FrontWall2"]
+shape = SubResource("BoxShape3D_il7fs")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FrontWall2"]
+transform = Transform3D(1, 0, 3.35276e-08, 0, 1, 0, -3.35276e-08, 0, 1, 0.664605, 7.39877, -20.7055)
+mesh = SubResource("BoxMesh_4u8rb")
+
+[node name="SUN" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+shadow_enabled = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="Table" type="Sprite3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4212, 20.8522, -17.6897)
+pixel_size = 0.1
+billboard = 2
+texture = ExtResource("2_i40fk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+visible = false
+shape = SubResource("BoxShape3D_x1dx5")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+script = ExtResource("4_30r6k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.706779, 0)
+shape = SubResource("ConvexPolygonShape3D_xv8at")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.18784, 5.82523, -0.0906236)
+mesh = SubResource("CapsuleMesh_yhw0w")
+
+[node name="Neck" type="Node3D" parent="CharacterBody3D"]
+transform = Transform3D(-0.272263, 0, 0.962223, 0, 1, 0, -0.962223, 0, -0.272263, 3.65863, 5.71748, 1.65112)
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Neck"]
+transform = Transform3D(-0.291153, 0, -0.956676, 0, 1, 0, 0.956676, 0, -0.291153, 2.42488, 1.10573, -0.529619)
+fov = 70.0
+
+[node name="Fist" type="Sprite3D" parent="CharacterBody3D/Neck/Camera3D"]
+transform = Transform3D(0.113776, 0, 0.993506, 0, 1, 0, -0.993506, 0, 0.113776, 2.54427, 6.10333, 0.119901)
+flip_h = true
+pixel_size = 0.001
+billboard = 2
+texture = ExtResource("5_d7tf8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody3D/Neck/Camera3D/Fist"]
+libraries = {
+"": SubResource("AnimationLibrary_xrejk")
+}
+
+[node name="Finger" type="Sprite3D" parent="CharacterBody3D/Neck/Camera3D"]
+transform = Transform3D(0.999806, 0, 0.0196867, 0, 1, 0, -0.0196867, 0, 0.999806, 0.66577, 2.10518, 1.15196)
+billboard = 2
+texture = ExtResource("3_2f4og")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody3D/Neck/Camera3D/Finger"]
+libraries = {
+"": SubResource("AnimationLibrary_r5gyb")
+}
+
+[node name="Punch" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_fmv71")
+
+[node name="Wilhelm" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_n7c3v")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.5661, 0)
+light_energy = 35.0
+shadow_enabled = true
+omni_range = 128.0

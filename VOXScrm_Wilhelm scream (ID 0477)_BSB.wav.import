@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b4xplgweophd2"
+path="res://.godot/imported/VOXScrm_Wilhelm scream (ID 0477)_BSB.wav-94ed3a350b2d43341be9fd0d7f94a0f1.sample"
+
+[deps]
+
+source_file="res://VOXScrm_Wilhelm scream (ID 0477)_BSB.wav"
+dest_files=["res://.godot/imported/VOXScrm_Wilhelm scream (ID 0477)_BSB.wav-94ed3a350b2d43341be9fd0d7f94a0f1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

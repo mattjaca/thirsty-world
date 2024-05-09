@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csim7oc0beyry"
-path.s3tc="res://.godot/imported/left-facing-fist-emoji-2048x1313-ccslh235.png-42f1cf67ef84be2f5b4c6dc2426932fe.s3tc.ctex"
+uid="uid://7v125t42q7pe"
+path.s3tc="res://.godot/imported/middle-finger-emoji-701x1024-oukv7z5g.png-a76377834658712f2712a2282fe575f0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://left-facing-fist-emoji-2048x1313-ccslh235.png"
-dest_files=["res://.godot/imported/left-facing-fist-emoji-2048x1313-ccslh235.png-42f1cf67ef84be2f5b4c6dc2426932fe.s3tc.ctex"]
+source_file="res://middle-finger-emoji-701x1024-oukv7z5g.png"
+dest_files=["res://.godot/imported/middle-finger-emoji-701x1024-oukv7z5g.png-a76377834658712f2712a2282fe575f0.s3tc.ctex"]
 
 [params]
 

@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfbijdj2pmcw3"]
+
+[ext_resource type="Script" path="res://SaloonOutside.gd" id="1_t41l2"]
+[ext_resource type="Texture2D" uid="uid://p46cbesojc0x" path="res://Saloon.png" id="2_j4u5o"]
+[ext_resource type="Script" path="res://Front.gd" id="3_u3hw3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dfmno"]
+size = Vector2(112, 26)
+
+[node name="SaloonOutside" type="Node2D"]
+script = ExtResource("1_t41l2")
+
+[node name="Saloon" type="Sprite2D" parent="."]
+position = Vector2(192, 64)
+scale = Vector2(0.696, 0.696)
+texture = ExtResource("2_j4u5o")
+
+[node name="Front" type="Area2D" parent="."]
+script = ExtResource("3_u3hw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Front"]
+position = Vector2(96, 99)
+shape = SubResource("RectangleShape2D_dfmno")
+
+[connection signal="body_entered" from="Front" to="." method="_on_front_body_entered"]
+[connection signal="body_entered" from="Front" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Front" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_exited" from="Front" to="." method="_on_front_body_exited"]
