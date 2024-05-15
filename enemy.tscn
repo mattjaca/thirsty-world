@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://boyeb6rr7xvfn"]
+[gd_scene load_steps=19 format=3 uid="uid://ig6ml8aflbss"]
 
 [ext_resource type="Texture2D" uid="uid://bbeeio0qo6cog" path="res://EnemyFrames/Enemy_1.png" id="1_l1bwn"]
 [ext_resource type="Script" path="res://enemy.gd" id="1_q0t0r"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://dv3e2xtj26yst" path="res://EnemyFrames/Enemy_5.png" id="5_jeikx"]
 [ext_resource type="Texture2D" uid="uid://d4mrtiut1mw41" path="res://EnemyFrames/Enemy_6.png" id="6_okqjv"]
 [ext_resource type="Texture2D" uid="uid://ckfnxfga7kocc" path="res://EnemyFrames/Enemy_7.png" id="7_lrxs3"]
-[ext_resource type="Script" path="res://RayCast2D.gd" id="9_o3npv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_083ap"]
 atlas = ExtResource("1_l1bwn")
@@ -97,7 +96,3 @@ frame_progress = 0.708912
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_jyvdf")
-
-[node name="RayCast2D" type="RayCast2D" parent="."]
-target_position = Vector2(0, -50)
-script = ExtResource("9_o3npv")

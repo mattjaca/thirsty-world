@@ -1,41 +1,46 @@
 extends CharacterBody2D
 
-
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
-
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+@export var speed = 500
 
 
-func _physics_process(delta):
-	# Add the gravity.
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
 	var velocity = Vector2.ZERO # the players movement vector?
-	if Input.is_action_pressed("move_right"):
+	if Input.is_action_pressed("Right"):
 		velocity.x += 1
-	if Input.is_action_pressed("move_down"):
+	if Input.is_action_pressed("Down"):
 		velocity.y +=  1
-	if Input.is_action_pressed("move_left"):
+	if Input.is_action_pressed("Left"):
 		velocity.x -= 1
-	if Input.is_action_pressed("move_up"):
+	if Input.is_action_pressed("Up"):
 		velocity.y -= 1
 	if velocity.length() > 0:
-		velocity = velocity.normalized() * SPEED
-	#if not is_on_floor():
-		#velocity.y += gravity * delta
-
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	#var direction = Input.get_axis("ui_left", "ui_right")
-	#if direction:
-		#velocity.x = direction * SPEED
-	#else:
-		#velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity = velocity.normalized() * speed
+		#$AnimatedSprite2D.animation = "shoot"
+		#$AnimatedSprite2D.play()
+	if velocity.length() == 0 && Input.is_action_pressed("shoot") == false:
+		$AnimatedSprite2D2.animation = "still"
+		$AnimatedSprite2D2.play()
+	if Input.is_action_pressed("shoot"):
+		$AnimatedSprite2D2.animation = "shoot"
+		$AnimatedSprite2D2.play()
 		
+		
+		
+		
+	#else:
+		#$AnimatedSprite2D.animation="idle"
+	
 	position += velocity * delta
-
-	move_and_slide()
+#position = position.clamp(Vector2.ZERO, screen_size)
+	
+	#if velocity.x != 0:
+		#$AnimatedSprite2D.animation = "walk"
+		#$AnimatedSprite2D.flip_v = false
+		#$AnimatedSprite2D.flip_h = velocity.x < 0
+	pass

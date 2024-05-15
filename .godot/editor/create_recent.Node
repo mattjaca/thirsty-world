@@ -1,4 +1,3 @@
-Node2D
 RayCast2D
 CollisionShape2D
 CharacterBody2D
@@ -13,3 +12,4 @@ StaticBody2D
 Camera2D
 TileMap
 RigidBody2D
+AnimatedSprite2D
