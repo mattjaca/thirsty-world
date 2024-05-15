@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dv3e2xtj26yst" path="res://EnemyFrames/Enemy_5.png" id="5_jeikx"]
 [ext_resource type="Texture2D" uid="uid://d4mrtiut1mw41" path="res://EnemyFrames/Enemy_6.png" id="6_okqjv"]
 [ext_resource type="Texture2D" uid="uid://ckfnxfga7kocc" path="res://EnemyFrames/Enemy_7.png" id="7_lrxs3"]
+[ext_resource type="Script" path="res://RayCast2D.gd" id="9_o3npv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_083ap"]
 atlas = ExtResource("1_l1bwn")
@@ -85,8 +86,6 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jyvdf"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_efhac"]
-
 [node name="Enemy" type="Area2D"]
 position = Vector2(112, 104)
 script = ExtResource("1_q0t0r")
@@ -99,16 +98,6 @@ frame_progress = 0.708912
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_jyvdf")
 
-[node name="Enemy2" type="CharacterBody2D" parent="."]
-position = Vector2(40, 0)
-
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Enemy2"]
-position = Vector2(-40, 0)
-sprite_frames = SubResource("SpriteFrames_4henh")
-animation = &"still"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy2"]
-shape = SubResource("RectangleShape2D_efhac")
-
-[node name="Enemy1" type="Sprite2D" parent="Enemy2"]
-texture = ExtResource("1_l1bwn")
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, -50)
+script = ExtResource("9_o3npv")

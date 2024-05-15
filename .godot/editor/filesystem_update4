@@ -3,3 +3,6 @@ res://player.tscn
 res://Overworld.tscn
 res://enemy.tscn
 res://Saloon.tscn
+res://Enemy2.gd
+res://enemy.gd
+res://EnemnyRaycastTest.tscn
