@@ -32,8 +32,14 @@ func _process(delta):
 		$AnimatedSprite2D.play()
 		
 	if ray_cast_down.is_colliding():
-		$AnimatedSprite2D.animation = "shoot"
+		$AnimatedSprite2D.animation = "drawn"
 		$AnimatedSprite2D.play()
+		
+		
+	else:
+		$AnimatedSprite2D.animation = "still"
+		$AnimatedSprite2D.play()
+		
 		
 		
 		

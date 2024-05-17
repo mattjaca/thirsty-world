@@ -1,5 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://do7u8mmpge86s"]
+[gd_scene load_steps=23 format=3 uid="uid://do7u8mmpge86s"]
 
+[ext_resource type="Script" path="res://enemies.gd" id="1_1f6ww"]
 [ext_resource type="Script" path="res://Enemy.gd" id="1_5uuu0"]
 [ext_resource type="Texture2D" uid="uid://bbeeio0qo6cog" path="res://EnemyFrames/Enemy_1.png" id="1_m0b12"]
 [ext_resource type="Texture2D" uid="uid://bd6ilukqj1gfk" path="res://EnemyFrames/Enemy_2.png" id="2_0xq3g"]
@@ -10,6 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://ckfnxfga7kocc" path="res://EnemyFrames/Enemy_7.png" id="7_hrd8b"]
 [ext_resource type="Script" path="res://RayCast2D.gd" id="9_4gpnk"]
 [ext_resource type="Script" path="res://Enemy2.gd" id="9_voq7j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yr62e"]
+atlas = ExtResource("7_hrd8b")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_083ap"]
 atlas = ExtResource("1_m0b12")
@@ -52,6 +57,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_yr62e")
+}],
+"loop": true,
+"name": &"drawn",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_083ap")
 }, {
 "duration": 1.0,
@@ -88,6 +101,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tgegx"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_1f6ww")
 
 [node name="Enemy" type="CharacterBody2D" parent="."]
 position = Vector2(24, 16)
@@ -95,7 +109,7 @@ script = ExtResource("1_5uuu0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Enemy"]
 sprite_frames = SubResource("SpriteFrames_onyol")
-animation = &"still"
+animation = &"drawn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
 shape = SubResource("RectangleShape2D_tgegx")
