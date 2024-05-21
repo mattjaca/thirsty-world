@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
 @export var speed = 500
-@onready var ray_cast_down = $RayCastDown
 
 
 # Called when the node enters the scene tree for the first time.
@@ -12,35 +11,24 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var velocity = Vector2.ZERO # the players movement vector?
-	if Input.is_action_pressed("move_right"):
+	if Input.is_action_pressed("Right"):
 		velocity.x += 1
-	if Input.is_action_pressed("move_down"):
+	if Input.is_action_pressed("Down"):
 		velocity.y +=  1
-	if Input.is_action_pressed("move_left"):
+	if Input.is_action_pressed("Left"):
 		velocity.x -= 1
-	if Input.is_action_pressed("move_up"):
+	if Input.is_action_pressed("Up"):
 		velocity.y -= 1
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 		#$AnimatedSprite2D.animation = "shoot"
 		#$AnimatedSprite2D.play()
 	if velocity.length() == 0 && Input.is_action_pressed("shoot") == false:
-		$AnimatedSprite2D.animation = "still"
-		$AnimatedSprite2D.play()
+		$AnimatedSprite2D2.animation = "still"
+		$AnimatedSprite2D2.play()
 	if Input.is_action_pressed("shoot"):
-		$AnimatedSprite2D.animation = "shoot"
-		$AnimatedSprite2D.play()
-		
-	if ray_cast_down.is_colliding():
-		$AnimatedSprite2D.animation = "drawn"
-		$AnimatedSprite2D.play()
-		
-		
-	else:
-		$AnimatedSprite2D.animation = "still"
-		$AnimatedSprite2D.play()
-		
-		
+		$AnimatedSprite2D2.animation = "shoot"
+		$AnimatedSprite2D2.play()
 		
 		
 		

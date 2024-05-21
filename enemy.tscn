@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b50801o8pxss7"]
+[gd_scene load_steps=19 format=3 uid="uid://ig6ml8aflbss"]
 
 [ext_resource type="Texture2D" uid="uid://bbeeio0qo6cog" path="res://EnemyFrames/Enemy_1.png" id="1_l1bwn"]
 [ext_resource type="Script" path="res://enemy.gd" id="1_q0t0r"]
@@ -85,8 +85,6 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jyvdf"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_efhac"]
-
 [node name="Enemy" type="Area2D"]
 position = Vector2(112, 104)
 script = ExtResource("1_q0t0r")
@@ -98,17 +96,3 @@ frame_progress = 0.708912
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_jyvdf")
-
-[node name="Enemy2" type="CharacterBody2D" parent="."]
-position = Vector2(40, 0)
-
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Enemy2"]
-position = Vector2(-40, 0)
-sprite_frames = SubResource("SpriteFrames_4henh")
-animation = &"still"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy2"]
-shape = SubResource("RectangleShape2D_efhac")
-
-[node name="Enemy1" type="Sprite2D" parent="Enemy2"]
-texture = ExtResource("1_l1bwn")
