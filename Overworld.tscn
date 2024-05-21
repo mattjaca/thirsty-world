@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cyt32gof2076m"]
+[gd_scene load_steps=24 format=3 uid="uid://cyt32gof2076m"]
 
 [ext_resource type="Texture2D" uid="uid://bsj6bwb1kjqd3" path="res://Textures/tilemap/DesertTileset16x16/Tileset16x16/DesertTilemapBlankBackground.png" id="1_h0geb"]
 [ext_resource type="PackedScene" uid="uid://igmahup37367" path="res://player.tscn" id="2_ofq36"]
@@ -10,6 +10,15 @@
 [ext_resource type="Script" path="res://Timer.gd" id="7_cvd4a"]
 [ext_resource type="AudioStream" uid="uid://darcceu4iku3u" path="res://sounds/gunshot.mp3" id="8_6jhn0"]
 [ext_resource type="Texture2D" uid="uid://btigjeeh7kvrm" path="res://Textures/RevolverCyl6.png" id="8_mx1y3"]
+[ext_resource type="Texture2D" uid="uid://durkfj0raivel" path="res://Textures/cee4c772-f3ae-414a-83fd-9af2d35bd3e3.jpg" id="10_dt6fq"]
+[ext_resource type="Texture2D" uid="uid://cyccmk6kt86vl" path="res://Textures/f8c4d723-d051-456e-bf0b-f07f557c108f.jpg" id="11_sgs6k"]
+[ext_resource type="Texture2D" uid="uid://cnhubvbnjrcl5" path="res://Textures/a127c198-4d9a-472a-be2b-3284ba67eeea.jpg" id="12_n81t6"]
+[ext_resource type="Texture2D" uid="uid://bt58rqau0gc1h" path="res://Textures/562984e7-5ffe-41cd-86b8-d4b1e735e70d.jpg" id="13_dvitp"]
+[ext_resource type="Texture2D" uid="uid://0w7s2suq3cnh" path="res://Textures/d93fdc37-2bab-480f-9d9b-6412f14c1d8f.jpg" id="14_ol66n"]
+[ext_resource type="Texture2D" uid="uid://biq8j2cn565c4" path="res://Textures/80526e56-74b7-4c8d-8bee-7fad8cbb9bd8.jpg" id="15_phoc7"]
+[ext_resource type="PackedScene" uid="uid://dfycccw88smux" path="res://ammopickup.tscn" id="17_wd7ys"]
+[ext_resource type="Script" path="res://ammopickupparent.gd" id="18_ibk3u"]
+[ext_resource type="Script" path="res://overworldammopickup.gd" id="18_lnn53"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gv7bd"]
 
@@ -600,6 +609,8 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_gv7bd")
 sources/0 = SubResource("TileSetAtlasSource_a0cbq")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vq22k"]
+
 [node name="Overworld" type="Node2D"]
 
 [node name="Worldbody" type="Area2D" parent="."]
@@ -615,7 +626,7 @@ layer_1/tile_data = PackedInt32Array(-65536, 196608, 3, -196605, 589824, 11, -26
 
 [node name="Player" parent="." instance=ExtResource("2_ofq36")]
 z_index = 2
-position = Vector2(56, 48)
+position = Vector2(48, 48)
 collision_mask = 3
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -635,7 +646,8 @@ texture = ExtResource("3_tpjvf")
 expand_mode = 1
 
 [node name="drawgun" type="Button" parent="Player/Camera2D/UI/Gun"]
-z_index = 2
+z_index = 5
+z_as_relative = false
 offset_left = -16.0
 offset_top = 96.0
 offset_right = 32.0
@@ -666,6 +678,65 @@ expand_mode = 1
 [node name="gunshot" type="AudioStreamPlayer" parent="Player/Camera2D/UI/Gun"]
 stream = ExtResource("8_6jhn0")
 
+[node name="cylinder5shots" type="TextureRect" parent="Player/Camera2D/UI/Gun"]
+z_as_relative = false
+offset_left = -8.0
+offset_top = 96.0
+offset_right = 24.0
+offset_bottom = 120.0
+mouse_filter = 2
+texture = ExtResource("10_dt6fq")
+expand_mode = 1
+
+[node name="cylinder4shots" type="TextureRect" parent="Player/Camera2D/UI/Gun"]
+z_as_relative = false
+offset_left = -8.0
+offset_top = 96.0
+offset_right = 24.0
+offset_bottom = 120.0
+mouse_filter = 2
+texture = ExtResource("11_sgs6k")
+expand_mode = 1
+
+[node name="cylinder3shots" type="TextureRect" parent="Player/Camera2D/UI/Gun"]
+z_as_relative = false
+offset_left = -8.0
+offset_top = 96.0
+offset_right = 24.0
+offset_bottom = 120.0
+mouse_filter = 2
+texture = ExtResource("12_n81t6")
+expand_mode = 1
+
+[node name="cylinder2shots" type="TextureRect" parent="Player/Camera2D/UI/Gun"]
+z_as_relative = false
+offset_left = -8.0
+offset_top = 96.0
+offset_right = 24.0
+offset_bottom = 120.0
+mouse_filter = 2
+texture = ExtResource("13_dvitp")
+expand_mode = 1
+
+[node name="cylinder1shots" type="TextureRect" parent="Player/Camera2D/UI/Gun"]
+z_as_relative = false
+offset_left = -8.0
+offset_top = 96.0
+offset_right = 24.0
+offset_bottom = 120.0
+mouse_filter = 2
+texture = ExtResource("14_ol66n")
+expand_mode = 1
+
+[node name="cylinder0shots" type="TextureRect" parent="Player/Camera2D/UI/Gun"]
+offset_left = -8.0
+offset_top = 96.0
+offset_right = 24.0
+offset_bottom = 120.0
+mouse_filter = 2
+texture = ExtResource("15_phoc7")
+expand_mode = 1
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
 position = Vector2(56, 0)
 stream = ExtResource("4_v808l")
@@ -675,7 +746,21 @@ autoplay = true
 wait_time = 0.76
 one_shot = true
 
+[node name="ammopickup" parent="." instance=ExtResource("17_wd7ys")]
+position = Vector2(-224, 168)
+script = ExtResource("18_ibk3u")
+
+[node name="Area2D2" type="Area2D" parent="ammopickup"]
+script = ExtResource("18_lnn53")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ammopickup/Area2D2"]
+shape = SubResource("RectangleShape2D_vq22k")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ammopickup/Area2D2"]
+stream = ExtResource("5_5fsf2")
+
 [connection signal="shoot" from="Player/Camera2D/UI/Gun" to="Player" method="_on_gun_shoot"]
+[connection signal="shoot" from="Player/Camera2D/UI/Gun" to="Player/Camera2D/UI/Gun" method="_on_shoot"]
 [connection signal="button_down" from="Player/Camera2D/UI/Gun/drawgun" to="Player" method="_on_drawgun_button_down"]
 [connection signal="button_down" from="Player/Camera2D/UI/Gun/drawgun" to="Player/Camera2D/UI/Gun" method="_on_drawgun_button_down"]
 [connection signal="button_down" from="Player/Camera2D/UI/Gun/drawgun" to="Player/Camera2D/UI/Gun/drawgun/gundrawdelay" method="_on_drawgun_button_down"]
@@ -684,3 +769,6 @@ one_shot = true
 [connection signal="timeout" from="Player/Camera2D/UI/Gun/drawgun/gundrawdelay" to="Player/Camera2D/UI/Gun" method="_on_gundrawdelay_timeout"]
 [connection signal="timeout" from="Player/Camera2D/UI/Gun/drawgun/clickspamprevention" to="Player/Camera2D/UI/Gun/drawgun" method="_on_clickspamprevention_timeout"]
 [connection signal="timeout" from="Player/holstertimer" to="Player" method="_on_holstertimer_timeout"]
+[connection signal="body_shape_entered" from="ammopickup/Area2D2" to="Player/Camera2D/UI/Gun" method="_on_area_2d_2_body_shape_entered"]
+[connection signal="body_shape_entered" from="ammopickup/Area2D2" to="ammopickup" method="_on_area_2d_2_body_shape_entered"]
+[connection signal="body_shape_entered" from="ammopickup/Area2D2" to="ammopickup/Area2D2" method="_on_body_shape_entered"]

@@ -3,3 +3,8 @@ res://player.tscn
 res://Overworld.tscn
 res://enemy.tscn
 res://Saloon.tscn
+res://gunlogic.gd
+res://ammopickup.tscn
+res://ammopickup.gd
+res://overworldammopickup.gd
+res://ammopickupparent.gd

@@ -1,12 +1,12 @@
+AudioStreamPlayer2D
 CollisionShape2D
+Area2D
+TextureRect
 CharacterBody2D
 Timer
 AudioStreamPlayer
-TextureRect
 Button
-Area2D
 CollisionPolygon2D
-AudioStreamPlayer2D
 StaticBody2D
 Camera2D
 TileMap
