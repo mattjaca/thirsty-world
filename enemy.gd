@@ -1,8 +1,11 @@
 extends CharacterBody2D
 
 @export var speed = 500
-@onready var ray_cast_down = $RayCastDown
 
+@onready var enemy_2 = $"../Enemy2"
+@onready var enemy = $"."
+
+const WALK_SPEED = 100
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -31,14 +34,7 @@ func _process(delta):
 		$AnimatedSprite2D.animation = "shoot"
 		$AnimatedSprite2D.play()
 		
-	if ray_cast_down.is_colliding():
-		$AnimatedSprite2D.animation = "drawn"
-		$AnimatedSprite2D.play()
-		
-		
-	else:
-		$AnimatedSprite2D.animation = "still"
-		$AnimatedSprite2D.play()
+
 		
 		
 		
@@ -56,3 +52,18 @@ func _process(delta):
 		#$AnimatedSprite2D.flip_v = false
 		#$AnimatedSprite2D.flip_h = velocity.x < 0
 	pass
+	
+	
+func _physics_process(delta):
+	
+	
+	if enemy_2:
+		var direction =(enemy_2.position - position).normalized()
+		velocity = direction * WALK_SPEED
+		move_and_slide()
+	else:
+		$AnimatedSprite2D.animation = "still"
+		$AnimatedSprite2D.play()
+		
+	
+		

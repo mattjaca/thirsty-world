@@ -24,11 +24,11 @@ func _process(delta):
 		#$AnimatedSprite2D.animation = "shoot"
 		#$AnimatedSprite2D.play()
 	if velocity.length() == 0 && Input.is_action_pressed("shoot") == false:
-		$AnimatedSprite2D2.animation = "still"
-		$AnimatedSprite2D2.play()
+		$AnimatedSprite2D.animation = "still"
+		$AnimatedSprite2D.play()
 	if Input.is_action_pressed("shoot"):
-		$AnimatedSprite2D2.animation = "shoot"
-		$AnimatedSprite2D2.play()
+		$AnimatedSprite2D.animation = "shoot"
+		$AnimatedSprite2D.play()
 		
 		
 		
